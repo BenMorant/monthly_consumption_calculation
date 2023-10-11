@@ -5,14 +5,25 @@ import com.ekwateur.util.AccountIdGenerator;
 public abstract class Customer {
 
 
-    private String accountId;
+    private final String accountId;
 
-    private EnergyType energyType;
+    private Consumption consumption;
 
-    public Customer(EnergyType energyType) {
+    public Customer(Consumption consumption) {
         this.accountId = AccountIdGenerator.generateAccountId();
-        this.energyType = energyType;
+        this.consumption = consumption;
+
     }
 
+    public String getAccountId() {
+        return accountId;
+    }
 
+    public Consumption getConsumption() {
+        return consumption;
+    }
+
+    public void setConsumption(Consumption consumption) {
+        this.consumption = consumption;
+    }
 }
