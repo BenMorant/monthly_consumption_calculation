@@ -14,7 +14,7 @@ class MonthlyCalculationServiceTest {
     @Test
     void calculate_for_individual_customer_electricity_january_2023() {
         // GIVEN
-        Customer customer = new Individual("xxx", EnergyType.ELECTRICITY);
+        Customer customer = new Individual(EnergyType.ELECTRICITY);
         monthlyCalculationService = new MonthlyCalculationService();
         Integer expected = null;
         //  WHEN
