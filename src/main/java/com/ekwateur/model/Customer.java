@@ -1,5 +1,7 @@
 package com.ekwateur.model;
 
+import com.ekwateur.util.AccountIdGenerator;
+
 public abstract class Customer {
 
 
@@ -7,8 +9,8 @@ public abstract class Customer {
 
     private EnergyType energyType;
 
-    public Customer(String accountId, EnergyType energyType) {
-        this.accountId = accountId;
+    public Customer(EnergyType energyType) {
+        this.accountId = AccountIdGenerator.generateAccountId();
         this.energyType = energyType;
     }
 
